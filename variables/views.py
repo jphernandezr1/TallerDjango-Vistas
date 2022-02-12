@@ -35,6 +35,6 @@ def variable_view(request, pk):
         return HttpResponse(variable, 'application/json')
 
     if request.method == 'DELETE':
-        variable_dto = vl.update_variable(pk, json.loads(request.body))
+        variable_dto = vl.delete_variable(pk, json.loads(request.body))
         variable = serializers.serialize('json', [variable_dto,])
         return HttpResponse(variable, 'application/json')
