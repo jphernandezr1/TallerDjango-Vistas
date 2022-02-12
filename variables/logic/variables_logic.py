@@ -19,8 +19,7 @@ def create_variable(var):
     variable.save()
     return variable
 
-def delete_variable(var_pk, var):
+def delete_variable(var_pk):
     variable = get_variable(var_pk)
-    variable.name = var["name"]
-    variable.save()
+    variable.delete()
     return variable
