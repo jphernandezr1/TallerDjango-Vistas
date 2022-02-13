@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "28857cb8-d603-4995-b559-340ce2c556c3",
+		"name": "Measuremnts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"variable_id\": 5, \n    \"value\": \"160\",\n    \"unit\":\"farenheit\",\n    \"place\":\"Room4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/measurements/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"measurements",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/measurements",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"measurements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/measurements/?id=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"measurements",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/measurements/?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"measurements",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"variable_id\": 3, \n    \"value\": \"120\",\n    \"unit\":\"farenheit\",\n    \"place\":\"Room4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/measurements/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"measurements",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
